@@ -25,4 +25,5 @@ router.post('/login', auth.doLogin);
 // route for logout action
 router.get('/logout', auth.logout);
 
+
 module.exports = router;

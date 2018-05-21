@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+    article#main-container
+        section.container-algebra
+        .header-algebra
+          .rombo-m
+            h2
+              | Álgebra
+          .label-head-m
+            h3 Ecuaciones
+        .body-s
+          article.main-ejc.first-m
+            h1
+              | Ejercicio - 001
+            .ejc-text
+              img(src='/images/ejercicios/2.png')
+            .container-res
+              .level-bar
+                span
+              .solu
+                button#myImg.sol-btn(value='/images/ejercicios/sol1.PNG', name='Solución')
+                  | ver imagen
+                button.sol-btn.js-video-button(data-video-id='6m-Qzh3NDjk')
+                  | ver video
+          article.main-ejc
+            h1
+              | Ejercicio - 002
+            .ejc-text
+              img(src='/images/ejercicios/4.PNG')
+            .container-res
+              .level-bar
+                span
+              .solu
+                .sol-btn
+                  | ver imagen
+                .sol-btn
+                  | ver video
+        #myModal.modal
+            span.close ×
+            img#img01.modal-content
+            div SOLUCION
+script.
+    $(".js-video-button").modalVideo({
+    youtube:{
+    controls:0,
+    nocookie: true
+    }
+    });

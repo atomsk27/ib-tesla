@@ -14,6 +14,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var cursos = require('./routes/courses');
 
 var app = express();
 
@@ -52,6 +53,8 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/cursos', cursos);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
