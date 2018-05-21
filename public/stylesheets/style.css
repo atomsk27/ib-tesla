@@ -1,38 +1,326 @@
-body {
-  background-color: #eee;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+body{
+	background: rgb(250,249,251);
+	font-family: 'Roboto', sans-serif;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
+
+figure >a>img{
+	width: 15%;
+	padding-top: .7em;
+	padding-left: 2em;
 }
-.form-signin .checkbox {
-  font-weight: normal;
+
+nav{
+	display: flex;
+	background-color: rgb(241,243,250);
+	justify-content: space-between;
 }
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+
+nav ul{
+	visibility: hidden;
+	position: absolute;
+	padding-top: 2em;
+	background: rgba(255,255,255,.93);
+	width: 100%;
+	text-align: center;
+	height: 100%;
+	margin-top: 6%;
+	font-size: 2.5em;
+	transform: translateY(-100%);
+	transition: all 1s;
+	z-index: 6;
+
 }
-.form-signin .form-control:focus {
-  z-index: 2;
+nav ul li{
+	padding: .2em;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+nav ul li a{
+	color: rgb(166,167,171);
+	text-decoration: none;
+
 }
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+
+nav>img{
+	padding-top: 1em;
+	width: 8%;
+	height: 9%;
+}
+
+.container-square{
+	display: flex;
+	font-size: 3em;
+	text-align: center;
+	font-family: sans-serif;
+	color: #efefef;
+	font-weight: bold;
+
+}
+.container-square a{
+	text-decoration: none;
+	color: white;
+}
+
+.square{
+	padding: 1.8em;
+	transition: ease-in .3s;
+
+
+}
+
+.mate{
+	background-color: rgb(49,176,191);
+}
+
+.fisi{
+	background-color: rgb(23,59,78);
+}
+
+.quimi{
+	background-color: rgb(215,145,31);
+}
+
+.mate2{
+	background-color: rgb(209,81,156);
+}
+.quimi2{
+	background-color: rgb(132,165,26);
+}
+.fisi2{
+	background-color: rgb(154,17,17);
+}
+
+.close-btn span{
+	border-radius: 50%;
+	background: rgb(166,167,171);
+	padding: .3em .5em .3em .5em;
+	color: white;
+
+}
+
+.close-btn{
+	margin-bottom: .6em;
+}
+
+.square:hover{
+	opacity:.8;
+	cursor: pointer;
+}
+#menu-btn:hover{
+	cursor: pointer;
+}
+ .close-btn:hover{
+ 	cursor: pointer;
+ }
+
+ /*estilos de las subsecciones*/
+ .container-math{
+ 	display: flex;
+ 	justify-content: space-between;
+ }
+
+ .rombo{
+ 	width: 200px;
+ 	height: 200px;
+ 	border-radius: .4em;
+ 	font-size: 2.5em;
+ 	font-family: sans-serif;
+
+ 	transform: rotate(45deg);
+ 	color: rgb(255,255,255);
+
+ }
+
+.rombo:hover{
+	cursor: pointer;
+}
+ .rombo p{
+ 	transform: translate(0%,150%) rotate(-45deg);
+ }
+.aritm{
+ 	background-color: rgb(40,139,101);
+ 	transform: translate(60%,70%) rotate(45deg);
+ }
+ .algebra{
+ 	background-color: rgb(239,30,128);
+ 	transform: translate(20%,150%) rotate(45deg);
+ }
+ .geo{
+ 	background-color: rgb(168,164,53);
+ 	transform: translate(-20%,70%) rotate(45deg);
+ }
+ .trigo{
+ 	background-color: rgb(18,8,113);
+ 	transform: translate(-60%,150%) rotate(45deg);
+ }
+ .calc1{
+ 	background-color: rgb(28,88,8);
+ 	transform: translate(-100%,70%) rotate(45deg);
+ }
+.calc2{
+	background-color: rgb(154,17,17);
+ 	transform: translate(-140%,150%) rotate(45deg);
+}
+
+.trigo p{
+	transform: translate(-10%,200%) rotate(-45deg);
+}
+
+/*estilos de ejercicios*/
+
+.container-algebra{
+	display: flex;
+	flex-direction: column;
+}
+
+.header-algebra{
+	display: flex;
+	flex-direction: row;
+	font-size: 1.3em;
+}
+.main-ejc{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+.rombo-m{
+	width: 120px;
+	height: 120px;
+	background-color: rgb(239,30,128);
+	transform: translate(40%,30%) rotate(45deg);
+	text-align: center;
+	border-radius: 15%;
+	box-shadow: 10px 11px 22px -8px rgba(0,0,0,0.73);
+	z-index: 5;
+}
+.rombo-m h2{
+	transform: translate(0%,130%) rotate(-45deg);
+	color: white;
+	z-index: 4;
+}
+.label-head-m{
+	background-color: rgb(239,30,128);
+	width: 85%;
+	height: 50px;
+	text-align: right;
+	transform: translateY(140%);
+	border-radius: 0% 15px 15px 0%;
+	color: white;
+	z-index: 1;
+}
+
+.label-head-m h3{
+	transform: translateX(-10%) translateY(40%);
+}
+
+.body-s{
+	width: 85%;
+
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: rgb(255,255,255);
+}
+
+.main-ejc{
+	height: 50%;
+	margin: 1em 1.3em 1em 1.3em;
+	border-radius: 10px;
+	box-shadow: 10px 11px 22px -8px rgba(0,0,0,0.73);
+}
+.first-m{
+	margin-top: 5em;
+}
+
+.main-ejc h1{
+	background-color: rgb(245,250,252);
+	color: rgb(152,155,157);
+	font-size: 1.3em;
+	padding: .5em 1.9em;
+	margin-left: 1em;
+	margin-top: .6em;
+	border-radius: 5px;
+	height: 20%;
+
+
+}
+.ejc-text{
+
+	transform: translateY(90%);
+	height: 50%;
+	width: 50%;
+}
+.container-res{
+
+	margin: 2em .9em;
+	display: flex;
+	flex-direction: row;
+	border-radius: 15px;
+	box-shadow: 10px 11px 22px -8px rgba(0,0,0,0.53);
+}
+.solu{
+	display: flex;
+	flex-direction: column;
+	padding-top: 2em;
+
+}
+.sol-btn{
+	padding: .4em .3em;
+	margin: .4em .4em;
+	color: rgb(152,155,157);
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 10px 11px 20px -8px rgba(0,0,0,0.2);
+}
+.level-bar{
+	padding: 1em;
+	margin: 1em .5em;
+	border: solid 1px #ababab;
+	border-bottom: solid 60px rgb(17,175,165);
+	border-radius: 5px;
+}
+.sol-btn:hover{
+	cursor: pointer;
+}
+
+.ejc-text img{
+	width: 90%;
+}
+.solu button{
+	background-color: white;
+
+}
+.nav-log ul {
+	list-style-type: none;
+	float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.nav-log li {
+    float: right;
+	list-style: none;
+}
+
+.nav-log li a {
+    display: block;
+	background: #F1F3FA;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-log li a:hover {
+    background-color: #c0c0c0;
 }
